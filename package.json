@@ -8,6 +8,9 @@
   "scripts": {
     "build": "tsup"
   },
+  "files": [
+    "./dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/john310897/retryable-fetch-ts.git"
