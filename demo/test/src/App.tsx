@@ -9,7 +9,8 @@ function App() {
 	}, [])
 
 	const etryApiCalls = async () => {
-		const clientResp = await retryFetch('https://api.artic.edu/api/v1/artworks1', {}, 2000, 5000)
+		const backendBseAPI='https://scaling-space-goldfish-gp5q7xj5g76f9p9w-3001.app.github.dev'
+		const clientResp = await fetch(backendBseAPI+'/'+'artworks',{credentials:'include'})
 		console.log("in resp after request")
 		console.log("-----------------------------------", clientResp)
 	}
