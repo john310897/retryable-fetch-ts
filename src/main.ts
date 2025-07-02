@@ -1,6 +1,9 @@
 async function fetchApi(api: string, init: {}, method: string = 'GET') {
-    const response = await fetch(api,init)
-    return response
+    console.debug('in direct api call function--------------------------')
+    console.debug('api',api)
+    console.debug('init',init)
+    // const response = await fetch(api,init).then(resp=>resp?.json()).then(data=>data)
+    return {}
 }
 
 const intervalPromise = (api: string, init: object, interval: number, timeout?: number) => {
@@ -26,7 +29,8 @@ const intervalPromise = (api: string, init: object, interval: number, timeout?: 
 async function retryFetch(api: string, init: {}, interval: number = 0, timeout: number = 0) {
     // stage--1 direct api call without interval and timeout
     if (!interval && !timeout) {
-        console.debug("stage--1 direct api call")
+        console.debug('testing console')
+        console.debug("stage--1 direct api call_-------------------------------------------")
         return await fetchApi(api, init)
     }
 
@@ -38,9 +42,8 @@ async function retryFetch(api: string, init: {}, interval: number = 0, timeout: 
 
     // stage--3 run api on failure for the given interval and till the given timeout
     if (interval && timeout) {
-        console.debug('stage--3 run api on failure for the given interval and till the given timeout')
-        return await intervalPromise(api, init, interval, timeout)
-
+        console.debug('stage--3 run api on failure for the given interval and    the given timeout')
+        return await intervalPromise(api, init, interval, timeout)  
     }
 }
 export { retryFetch }

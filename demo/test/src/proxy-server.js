@@ -22,12 +22,12 @@ app.get('/', (req, res) => {
 })
 
 app.get('/artworks', async (req, res) => {
-
     try {
-        const response = await fetch('https://api.artic.edu/api/v1/openapi.json',{method:'GET'}).then(res=>res?.json()).then(data=>{
-           console.log(data)
-            res.send(data)
+         const response=await fetch('https://api.artic.edu/api/v1/openapi.json',{method:'GET'}).then(res=>res?.json()).then(data=>{
+            return data
         })
+
+        res.send(response)
     } catch (error) {
         console.error('Error fetching from API:', error.message);
         res.status(500).send('Proxy error');
