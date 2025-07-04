@@ -1,7 +1,7 @@
 import './App.css';
 import { useEffect } from 'react';
 // import { retryFetch } from './package_main.ts';
-// import { retryFetch} from 'retryable-fetch-ts';
+import { retryFetch} from 'retryable-fetch-ts';
 
 function App() {
 	useEffect(() => {
@@ -14,7 +14,7 @@ function App() {
 		const backendBseAPI='https://scaling-space-goldfish-gp5q7xj5g76f9p9w-3001.app.github.dev'
 		
 		
-		const clientResp = await fetch(backendBseAPI+'/'+'artworks',{credentials:'include'})
+		const clientResp = await retryFetch(backendBseAPI+'/'+'artworks',{credentials:'include'})
 		console.log("in resp after request")
 		console.log("-----------------------------------", clientResp)
 	}
