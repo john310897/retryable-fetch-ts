@@ -11,13 +11,12 @@ function App() {
 	}, [])
 
 		const etryApiCalls = async () => {
-		const backendBseAPI='https://scaling-space-goldfish-gp5q7xj5g76f9p9w-3001.app.github.dev'
-		
-		
-		const clientResp = await retryFetch(backendBseAPI+'/'+'artworks',{credentials:'include'})
-		console.log("in resp after request")
-		console.log("-----------------------------------", clientResp)
-	}
+		const backendBseAPI='https://didactic-parakeet-p6grp74gqq5c66gj-3001.app.github.dev'
+			
+		const clientResp = await fetch(backendBseAPI+'/'+'artworks',{credentials:'include'}).then(resp=>{
+			console.log(resp)
+		})
+		}
 	return (
 		<div className="App">
 			<label>npm-package retryable-fetch</label>

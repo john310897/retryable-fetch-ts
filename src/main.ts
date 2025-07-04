@@ -1,9 +1,11 @@
+import axios from "axios"
 async function fetchApi(api: string, init: {}, method: string = 'GET') {
     console.debug('in direct api call function--------------------------')
     console.debug('api',api)
     console.debug('init',init)
-    // const response = await fetch(api,init).then(resp=>resp?.json()).then(data=>data)
-    return {}
+    const response = await axios.get(api,{withCredentials:true}).then(resp=>resp?.data).then(data=>data).catch(err=>err)
+    console.log("after response in the api call************************************",response)
+    return response
 }
 
 const intervalPromise = (api: string, init: object, interval: number, timeout?: number) => {
@@ -31,7 +33,10 @@ async function retryFetch(api: string, init: {}, interval: number = 0, timeout: 
     if (!interval && !timeout) {    
         console.debug('testing console')
         console.debug("stage--1 direct api call_-------------------------------------------")
-        return await fetchApi(api, init)
+        console.debug("while waiting for the response...")
+        const response= await fetchApi(api, init)
+        console.debug("parent function response",response)
+        return response
     }
 
     // stage--2 run api on failure for the given interval
