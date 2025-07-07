@@ -13,7 +13,7 @@ function App() {
 		const etryApiCalls = async () => {
 		const backendBseAPI='https://fictional-orbit-v5gvqp9gx9qhpv7g-3001.app.github.dev'
 			
-		await retryFetch(backendBseAPI+'/'+'artworks',{credentials:'include'},5000,10000).then(resp=>{
+		await retryFetch(backendBseAPI+'/'+'artworks',{credentials:'include'},0,0).then(resp=>{
 			console.log(resp)
 		})
 		}
