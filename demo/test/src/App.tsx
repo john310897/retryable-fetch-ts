@@ -11,9 +11,9 @@ function App() {
 	}, [])
 
 		const etryApiCalls = async () => {
-		const backendBseAPI='https://didactic-parakeet-p6grp74gqq5c66gj-3001.app.github.dev'
+		const backendBseAPI='https://fictional-orbit-v5gvqp9gx9qhpv7g-3001.app.github.dev'
 			
-		const clientResp = await fetch(backendBseAPI+'/'+'artworks',{credentials:'include'}).then(resp=>{
+		await retryFetch(backendBseAPI+'/'+'artworks',{credentials:'include'},5000,10000).then(resp=>{
 			console.log(resp)
 		})
 		}
