@@ -18,6 +18,10 @@ function App() {
 			console.log(resp)
 			setDataList(resp?.data)
 		})
+
+		await retryFetch(backendBseAPI+'/'+'failure_api',{credential:'include'},2000,10000).then(resp=>{
+			console.log(resp)
+		})
 	}
 	return (
 		<div className="App">

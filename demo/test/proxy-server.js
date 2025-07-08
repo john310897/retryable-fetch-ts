@@ -24,6 +24,11 @@ app.get('/artworks',async (req,res)=>{
     res.send(response)
 })
 
+// api call FAILURE
+app.get('/failure_api',(req,res)=>{
+   res.status(500).send("something worng")
+})
+
 // node express server listening at port 3001
 app.listen(3001, () => {
     console.log("new server changes detected")
