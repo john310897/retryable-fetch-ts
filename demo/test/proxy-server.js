@@ -1,7 +1,5 @@
-var express = require('express')
-var cors = require('cors')
-const { retryFetch } = require('retryable-fetch-ts')
-const { createProxyMiddleware,responseInterceptor } = require('http-proxy-middleware')
+const express = require('express')
+const cors = require('cors')
 
 var app = express();
 
@@ -11,35 +9,23 @@ const corsOptions = {
     allowHeaders: ['Content-type', 'Authorization', 'Access-Control-Allow-Origin'],
     credentials: true
 }
-// app.use('/artworks', createProxyMiddleware({
-//     target: 'https://api.artic.edu/api/v1/artworks',
-//     changeOrigin: true,
-//     selfHandleResponse: true,
-//     on: {
-//         proxyRes: responseInterceptor(async (responseBuffer, proxyRes, req, res) => {
-//             console.log("in the proxy resp")
-//             const location=proxyRes.headers.location
-//             console.log('redirect location is',location)
-//             const data=await fetch(location).then(res=>res.json()).then(data=>data)
-//             console.log(data)
-//             proxyRes.pipe(JSON.stringify(data))
-//         }),
-//     }
-// }))
+
 app.use(cors(corsOptions))
 
-
-
-
+// default backend API for testing
 app.get('/', (req, res) => {
     console.log('backend works')
     res.send('hello from backend')
 })
 
+// calling external API through internal set up
 app.get('/artworks',async (req,res)=>{
     const response=await fetch('https://api.artic.edu/api/v1/artworks').then(resp=>resp?.json()).then(data=>data)
     res.send(response)
 })
+
+// node express server listening at port 3001
 app.listen(3001, () => {
-    console.log('server running on port' + 3001)
+    console.log("new server changes detected")
+    console.log('server running on port' + 3001) 
 })
