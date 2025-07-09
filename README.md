@@ -7,7 +7,7 @@
 
 `retryable-fetch-ts` is a lightweight TypeScript package designed to simplify API fetching with built-in support for automatic retries and configurable timeouts. It is particularly useful in scenarios where network reliability is uncertain, and repeated attempts are necessary to ensure successful API communication.
 
-demo version of the usage example will be available soon here
+demo version [working example](https://john310897.github.io/retryable-fetch-ts/)
 
 ### Feautures
 * Automatic Retry Logic: Automatically retries failed API requests based on a user-defined retry interval and maximum retry count.
