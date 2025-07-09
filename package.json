@@ -27,5 +27,6 @@
   },
   "dependencies": {
     "axios": "^1.10.0"
-  }
+  },
+"keywords": ["retryable-fetch", "typescript-fetch", "api-retry", "fetch-with-timeout", "retry-logic", "http-retry", "network-resilience", "typescript-utilities", "api-wrapper", "lightweight-fetch", "fetch-retry-ts", "resilient-api-calls", "timeout-fetch", "retryable-api", "typescript-networking"]
 }

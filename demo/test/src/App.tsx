@@ -34,17 +34,21 @@ function App() {
 	return (
 		<div className="App">
 			<label>npm-package retryable-fetch</label>
-			<div style={{ height: '200px', overflow: 'hidden' }}>
+
+			<p><label><b>API call -- success response</b></label></p>
+			<div className='response__container'>
 				{dataList?.map((item: any, index: number) => (
 					<p>{item?.artist_display}</p>
 				))}
 			</div>
 
 			<hr />
-			<div>
-				<label>second api response after retrying</label>
+
+			<p><label><b>API call -- failure response</b></label></p>
+			<div className='response__container'>
 				<p>{secondApiresp}</p>
 			</div>
+			<i>checkout network for api failures and retries</i>
 
 
 

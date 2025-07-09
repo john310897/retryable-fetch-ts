@@ -1,9 +1,9 @@
 # retryable-fetch-ts
 
-[![NPM version](https://img.shields.io/badge/npm-v10.7.0-brightgreen)](https://www.npmjs.com/package/ng-react-bridge)
-[![NODE version](https://img.shields.io/badge/node-v20.14.0-brightgreen)](https://www.npmjs.com/package/ng-react-bridge)
-[![types](https://img.shields.io/badge/types-TypeScript-blue)](https://www.npmjs.com/package/ng-react-bridge)
-[![license](https://img.shields.io/github/license/john310897/ng-react-bridge)]()
+[![NPM version](https://img.shields.io/badge/npm-v10.7.0-brightgreen)](https://www.npmjs.com/package/retryable-fetch-ts)
+[![NODE version](https://img.shields.io/badge/node-v20.14.0-brightgreen)](https://www.npmjs.com/package/retryable-fetch-ts)
+[![types](https://img.shields.io/badge/types-TypeScript-blue)](https://www.npmjs.com/package/retryable-fetch-ts)
+[![license](https://img.shields.io/github/license/john310897/retryable-fetch-ts)]()
 
 `retryable-fetch-ts` is a lightweight TypeScript package designed to simplify API fetching with built-in support for automatic retries and configurable timeouts. It is particularly useful in scenarios where network reliability is uncertain, and repeated attempts are necessary to ensure successful API communication.
 
