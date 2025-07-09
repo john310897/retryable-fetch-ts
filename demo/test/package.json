@@ -15,7 +15,7 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-scripts": "5.0.1",
-    "retryable-fetch-ts": "file:../../retryable-fetch-ts-0.0.1.tgz",
+    "retryable-fetch-ts": "^0.0.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

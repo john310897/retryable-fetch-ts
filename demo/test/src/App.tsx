@@ -16,7 +16,7 @@ function App() {
 		const backendBseAPI = 'https://fictional-orbit-v5gvqp9gx9qhpv7g-3001.app.github.dev'
 
 		// direct api call without failure
-		await retryFetch(backendBseAPI + '/' + 'artworks', { credentials: 'include' }, 5000, 0).then(resp => {
+		await retryFetch(backendBseAPI , '/' , 'artworks', { credentials: 'include' }, 5000, 0).then(resp => {
 			console.log(resp)
 			setDataList(resp?.data)
 		}).catch(err => {
@@ -24,7 +24,7 @@ function App() {
 		})
 
 		// api call with failure and with interval and timeout specified 
-		await retryFetch(backendBseAPI + '/' + 'failure_api', { credential: 'include' }, 2000, 10000).then(resp => {
+		await retryFetch(backendBseAPI , '/' , 'failure_api', { credential: 'include' }, 2000, 10000).then(resp => {
 			console.log(resp)
 		}).catch(err => {
 			console.log('api failed after retrying ...')
