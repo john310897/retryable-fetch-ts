@@ -1,7 +1,7 @@
 {
   "name": "retryable-fetch-ts",
   "version": "0.0.5",
-  "description": "",
+  "description": "`retryable-fetch-ts` is a lightweight TypeScript package designed to simplify API fetching with built-in support for automatic retries and configurable timeouts.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
