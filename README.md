@@ -11,6 +11,7 @@ demo version [working example](https://john310897.github.io/retryable-fetch-ts/)
 (refer the demo folder for the example code in the github repo)
 
 ### Feautures
+
 * Automatic Retry Logic: Automatically retries failed API requests based on a user-defined retry interval and maximum retry count.
 * Configurable Timeout: Allows setting a timeout duration to limit how long the fetch operation should continue attempting retries.
 * Customizable Parameters: Supports flexible configuration for retry intervals, maximum attempts, and timeout thresholds.
@@ -19,13 +20,13 @@ demo version [working example](https://john310897.github.io/retryable-fetch-ts/)
 
 ### Installation
 
-```bash 
+```bash
 npm install retryable-fetch-ts
 ```
 
 ### Usage Example
 
-```tsx 
+```tsx
 import { retryFetch } from 'retryable-fetch-ts';
 
 function App() {
