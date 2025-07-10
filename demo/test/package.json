@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "https://john310897.github.io/retryable-fetch-ts/",
+  "description": "`retryable-fetch-ts` is a lightweight TypeScript package designed to simplify API fetching with built-in support for automatic retries and configurable timeouts.",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
