@@ -4,7 +4,7 @@ const cors = require('cors')
 var app = express();
 
 const corsOptions = {
-    origin: 'https://fictional-orbit-v5gvqp9gx9qhpv7g-3000.app.github.dev',
+    origin: 'https://john310897.github.io/retryable-fetch-ts',
     methods: ['GET', 'PUT', 'POST', 'DELETE', 'OPTIONS'],
     allowHeaders: ['Content-type', 'Authorization', 'Access-Control-Allow-Origin'],
     credentials: true
